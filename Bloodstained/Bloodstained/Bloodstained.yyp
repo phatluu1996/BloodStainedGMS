@@ -1,6 +1,11 @@
 {
   "resources": [
+    {"id":{"name":"spr_miriam_crouch","path":"sprites/spr_miriam_crouch/spr_miriam_crouch.yy",},"order":4,},
+    {"id":{"name":"player_miriam_jump","path":"sprites/player_miriam_jump/player_miriam_jump.yy",},"order":2,},
     {"id":{"name":"player_miriam_idle","path":"sprites/player_miriam_idle/player_miriam_idle.yy",},"order":0,},
+    {"id":{"name":"player_miriam_run","path":"sprites/player_miriam_run/player_miriam_run.yy",},"order":1,},
+    {"id":{"name":"objPrtPlayer","path":"objects/objPrtPlayer/objPrtPlayer.yy",},"order":0,},
+    {"id":{"name":"player_miriam_fall","path":"sprites/player_miriam_fall/player_miriam_fall.yy",},"order":3,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
