@@ -6,6 +6,14 @@
     {"id":{"name":"player_miriam_run","path":"sprites/player_miriam_run/player_miriam_run.yy",},"order":1,},
     {"id":{"name":"objPrtPlayer","path":"objects/objPrtPlayer/objPrtPlayer.yy",},"order":0,},
     {"id":{"name":"player_miriam_fall","path":"sprites/player_miriam_fall/player_miriam_fall.yy",},"order":3,},
+    {"id":{"name":"player_hachi_fall","path":"sprites/player_hachi_fall/player_hachi_fall.yy",},"order":3,},
+    {"id":{"name":"player_hachi_crouch","path":"sprites/player_hachi_crouch/player_hachi_crouch.yy",},"order":4,},
+    {"id":{"name":"player_miriam_idle","path":"sprites/player_miriam_idle/player_miriam_idle.yy",},"order":0,},
+    {"id":{"name":"player_hachi_stairs","path":"sprites/player_hachi_stairs/player_hachi_stairs.yy",},"order":6,},
+    {"id":{"name":"player_hachi_crouch_walk","path":"sprites/player_hachi_crouch_walk/player_hachi_crouch_walk.yy",},"order":5,},
+    {"id":{"name":"player_hachi_walk","path":"sprites/player_hachi_walk/player_hachi_walk.yy",},"order":1,},
+    {"id":{"name":"player_hachi_jump","path":"sprites/player_hachi_jump/player_hachi_jump.yy",},"order":2,},
+    {"id":{"name":"player_hachi_stand","path":"sprites/player_hachi_stand/player_hachi_stand.yy",},"order":0,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
@@ -42,6 +50,7 @@
     {"folderPath":"folders/Objects/Player.yy","order":1,"resourceVersion":"1.0","name":"Player","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Player.yy","order":1,"resourceVersion":"1.0","name":"Player","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Player/Miriam.yy","order":1,"resourceVersion":"1.0","name":"Miriam","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/Player/Hachi.yy","order":2,"resourceVersion":"1.0","name":"Hachi","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
