@@ -5,6 +5,7 @@ enum PLAYER_STATE{
 	FALL,
 	CROUCH
 }
+depth = 0;
 hp = 0;
 hpLimit = 0;
 mp = 0;
