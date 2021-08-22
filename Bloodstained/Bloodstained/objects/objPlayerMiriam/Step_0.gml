@@ -15,7 +15,7 @@ key_attack = keyboard_check_pressed(ord("J"));
 //State machine
 switch (state) {
     case MIRIAM_STATE.IDLE:
-        if(!isAttack && (key_left || key_right) && !place_meeting(x + (key_right - key_left), y, objMiriamCollisionCube)){ // if key left/right press and not hit wall
+        if(!isAttack && (key_left || key_right) && !place_meeting(x + (key_right - key_left), y, objPrtCollisionCube)){ // if key left/right press and not hit wall
 			state = MIRIAM_STATE.RUN;
 		}				
 		if(key_down && !key_jump_hold){
@@ -27,7 +27,7 @@ switch (state) {
 			state = MIRIAM_STATE.JUMP;
 		}
 		
-		if(!place_meeting(x, y + 1, objMiriamCollisionCube)){
+		if(!place_meeting(x, y + 1, objPrtCollisionCube)){
 			state = MIRIAM_STATE.FALL; // move to crouch state
 		}
 		
@@ -36,7 +36,7 @@ switch (state) {
 		
 	case MIRIAM_STATE.RUN:
 		hsp = (key_right - key_left) * runSpd * (!isAttack); //calculate hsp 
-        if(!(key_left || key_right) || place_meeting(x + hsp, y, objMiriamCollisionCube)){// !(key_left || key_right) <=> !key_left && !key_right
+        if(!(key_left || key_right) || place_meeting(x + hsp, y, objPrtCollisionCube)){// !(key_left || key_right) <=> !key_left && !key_right
 			state = MIRIAM_STATE.IDLE;
 		}	
 		if(key_right - key_left != 0){
@@ -48,7 +48,7 @@ switch (state) {
 			mask_index = player_miriam_crouch_mask;
 		}		
 		
-		if(!place_meeting(x, y + 1, objMiriamCollisionCube)){
+		if(!place_meeting(x, y + 1, objPrtCollisionCube)){
 			state = MIRIAM_STATE.FALL; // move to crouch state
 		}
 		
@@ -79,7 +79,7 @@ switch (state) {
 		}
 		hsp = (key_right - key_left) * runSpd; //calculate hsp
         vsp += gravSpd; //gravity force
-		if(place_meeting(x, y + vsp, objMiriamCollisionCube)){
+		if(place_meeting(x, y + vsp, objPrtCollisionCube)){
 			state = hsp != 0 ? MIRIAM_STATE.RUN : MIRIAM_STATE.IDLE;
 		}
 		miriam_sprite(player_miriam_fall, player_miriam_air_whip_attack);
@@ -103,7 +103,7 @@ switch (state) {
 			mask_index = player_miriam_slide_mask;
 		}
 		
-		if(!place_meeting(x, y + 1, objMiriamCollisionCube)){
+		if(!place_meeting(x, y + 1, objPrtCollisionCube)){
 			state = MIRIAM_STATE.FALL; // move to crouch state
 			mask_index = player_miriam_idle_mask;
 		}
@@ -114,7 +114,7 @@ switch (state) {
 	case MIRIAM_STATE.SLIDE:
 		hsp = image_xscale * runSpd * 2;
 		slideTimer++;
-		if(!place_meeting(x, floor(y) - 1, objMiriamCollisionCube)){
+		if(!place_meeting(x, floor(y) - 1, objPrtCollisionCube)){
 			if(slideTimer >= room_speed/4){
 				if(key_down){
 					state = MIRIAM_STATE.CROUCH;
@@ -128,7 +128,7 @@ switch (state) {
 			}
 		}
 		
-		if(!place_meeting(x, floor(y) + 1, objMiriamCollisionCube)){
+		if(!place_meeting(x, floor(y) + 1, objPrtCollisionCube)){
 			mask_index = player_miriam_idle_mask;
 			state = MIRIAM_STATE.FALL; // move to crouch state
 			slideTimer = 0;
@@ -151,8 +151,8 @@ switch (state) {
 
 
 //Collision x
-if(place_meeting(x + hsp, y, objMiriamCollisionCube)){ //Check at object + vsp in y axis in the next frame
-	while(!place_meeting(x + sign(hsp), y, objMiriamCollisionCube)){
+if(place_meeting(x + hsp, y, objPrtCollisionCube)){ //Check at object + vsp in y axis in the next frame
+	while(!place_meeting(x + sign(hsp), y, objPrtCollisionCube)){
 		x+=sign(hsp);
 	}
 	hsp = 0;
@@ -162,8 +162,8 @@ if(place_meeting(x + hsp, y, objMiriamCollisionCube)){ //Check at object + vsp i
 x+=hsp; //Update horizonal speed
 
 //Collision y
-if(place_meeting(x, y + vsp, objMiriamCollisionCube)){ //Check at object + vsp in y axis in the next frame
-	while(!place_meeting(x, y + sign(vsp), objMiriamCollisionCube)){
+if(place_meeting(x, y + vsp, objPrtCollisionCube)){ //Check at object + vsp in y axis in the next frame
+	while(!place_meeting(x, y + sign(vsp), objPrtCollisionCube)){
 		y+=sign(vsp);
 	}
 	vsp = 0;
