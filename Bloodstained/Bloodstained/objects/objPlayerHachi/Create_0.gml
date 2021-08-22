@@ -9,6 +9,10 @@ enum HACHI_STATE{
 	CROUCH_RUN
 }
 
+//Status
 hp = 50;
 mp = 20;
-gravSpd = 0.3;
+gravSpd = 0.3; //
+
+//
+isAttack = false;
