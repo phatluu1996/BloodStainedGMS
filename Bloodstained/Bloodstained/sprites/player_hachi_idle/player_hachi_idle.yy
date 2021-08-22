@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"8f0674e7-9fb1-4821-8e97-147071fb5f38","path":"sprites/player_hachi_stand/player_hachi_stand.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8f0674e7-9fb1-4821-8e97-147071fb5f38","path":"sprites/player_hachi_stand/player_hachi_stand.yy",},"LayerId":{"name":"a3a49cf4-60bd-448e-ae9b-9d044bf44001","path":"sprites/player_hachi_stand/player_hachi_stand.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"player_hachi_stand","path":"sprites/player_hachi_stand/player_hachi_stand.yy",},"resourceVersion":"1.0","name":"8f0674e7-9fb1-4821-8e97-147071fb5f38","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"8f0674e7-9fb1-4821-8e97-147071fb5f38","path":"sprites/player_hachi_idle/player_hachi_idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"8f0674e7-9fb1-4821-8e97-147071fb5f38","path":"sprites/player_hachi_idle/player_hachi_idle.yy",},"LayerId":{"name":"a3a49cf4-60bd-448e-ae9b-9d044bf44001","path":"sprites/player_hachi_idle/player_hachi_idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"player_hachi_idle","path":"sprites/player_hachi_idle/player_hachi_idle.yy",},"resourceVersion":"1.0","name":"8f0674e7-9fb1-4821-8e97-147071fb5f38","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"player_hachi_stand","path":"sprites/player_hachi_stand/player_hachi_stand.yy",},
+    "spriteId": {"name":"player_hachi_idle","path":"sprites/player_hachi_idle/player_hachi_idle.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"ead3a189-66b4-4b3c-8ef2-facef7bece95","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8f0674e7-9fb1-4821-8e97-147071fb5f38","path":"sprites/player_hachi_stand/player_hachi_stand.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ead3a189-66b4-4b3c-8ef2-facef7bece95","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8f0674e7-9fb1-4821-8e97-147071fb5f38","path":"sprites/player_hachi_idle/player_hachi_idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,9 +58,9 @@
     "yorigin": 64,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"player_hachi_stand","path":"sprites/player_hachi_stand/player_hachi_stand.yy",},
+    "parent": {"name":"player_hachi_idle","path":"sprites/player_hachi_idle/player_hachi_idle.yy",},
     "resourceVersion": "1.3",
-    "name": "player_hachi_stand",
+    "name": "player_hachi_idle",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/Player/Hachi.yy",
   },
   "resourceVersion": "1.0",
-  "name": "player_hachi_stand",
+  "name": "player_hachi_idle",
   "tags": [],
   "resourceType": "GMSprite",
 }
