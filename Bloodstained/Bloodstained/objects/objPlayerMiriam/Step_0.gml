@@ -10,6 +10,7 @@ key_jump = keyboard_check_pressed(ord("K"));
 key_jump_hold = keyboard_check(ord("K")); 
 
 key_attack = keyboard_check_pressed(ord("J")); 
+key_skill = keyboard_check_pressed(ord("U"));
 
 
 //State machine
@@ -31,20 +32,8 @@ switch (state) {
 			state = MIRIAM_STATE.FALL; // move to crouch state
 		}
 		
-		if(key_attack && !isAttack){
-			isAttack = true;	
-			image_index = 0;
-		}
 		
-		if(isAttack){
-			sprite_index = player_miriam_idle_whip_attack;			
-			if(animation_end()){
-				isAttack = false;	
-			}
-		}else{
-			sprite_index = player_miriam_idle;
-		}
-		//miriam_sprite(player_miriam_idle, player_miriam_idle_whip_attack);
+		miriam_sprite_ext(player_miriam_idle, player_miriam_idle_whip_attack, player_miriam_idle_sickle_attack, player_miriam_idle_rapier_attack);
         break;
 		
 	case MIRIAM_STATE.RUN:
@@ -83,7 +72,7 @@ switch (state) {
 			state = MIRIAM_STATE.FALL; // move to crouch state
 			vsp = 0;
 		}
-		miriam_sprite(player_miriam_jump, player_miriam_air_whip_attack);
+		miriam_sprite_ext(player_miriam_jump, player_miriam_air_whip_attack, player_miriam_air_sickle_attack, player_miriam_air_rapier_attack);
         break;
 		
 	case MIRIAM_STATE.FALL:
@@ -95,7 +84,7 @@ switch (state) {
 		if(place_meeting(x, y + vsp, objPrtCollisionCube)){
 			state = hsp != 0 ? MIRIAM_STATE.RUN : MIRIAM_STATE.IDLE;
 		}
-		miriam_sprite(player_miriam_fall, player_miriam_air_whip_attack);
+		miriam_sprite_ext(player_miriam_fall, player_miriam_air_whip_attack, player_miriam_air_sickle_attack, player_miriam_air_rapier_attack);
         break;
 		
 	case MIRIAM_STATE.CROUCH:
@@ -145,10 +134,7 @@ switch (state) {
 			mask_index = player_miriam_idle_mask;
 			state = MIRIAM_STATE.FALL; // move to crouch state
 			slideTimer = 0;
-			hsp = 0;
-			if(isAttack){
-				isAttack = false;
-			}
+			hsp = 0;			
 		}
 		
 		sprite_index = player_miriam_slide; //swicth animation to 'player_miriam_slide'

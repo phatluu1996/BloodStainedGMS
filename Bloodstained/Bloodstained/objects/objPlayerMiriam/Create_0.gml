@@ -8,6 +8,13 @@ enum MIRIAM_STATE{
 	SLIDE
 }
 
+enum MIRIAM_SKILL{
+	SICKLE,
+	DAGGER,
+	RAPIER,
+	AXE
+}
+
 //Physics
 hp = 10;
 hpLimit = 10;
@@ -20,3 +27,8 @@ slideTimer = 0;
 
 //boolean
 isAttack = false;
+isSkill = false;
+canSkill = true;
+
+//skill
+skill = MIRIAM_SKILL.RAPIER;
