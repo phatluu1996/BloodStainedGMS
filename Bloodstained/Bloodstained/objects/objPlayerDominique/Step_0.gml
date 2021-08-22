@@ -3,12 +3,12 @@ key_left = keyboard_check(vk_left); // check if  left keyboard is hold
 key_right = keyboard_check(vk_right);// check if right keyboard is hold 
 key_down = keyboard_check(vk_down);// check if down keyboard is hold 
 key_jump = keyboard_check(vk_space);// check if up keyboard is hold 
+key_attack = keyboard_check_pressed(ord("A"))
 
 
 //State machine
 switch (state) {
     case DOMINIQUE_STATE.IDLE:
-        // code here
 		if((key_left || key_right) && !place_meeting(x + (key_right - key_left),y,objPrtCollisionCube) ){
 			state = DOMINIQUE_STATE.RUN;
 		}
@@ -22,12 +22,13 @@ switch (state) {
 			vsp = -JumpSpd;
 			state = DOMINIQUE_STATE.JUMP;
 		}
-		sprite_index = player_dominique_idle; // action idle of dominique
+	
+		dominique_strike(player_dominique_spear_strike_attack,player_dominique_idle);
+		
         break;
 	case DOMINIQUE_STATE.RUN:
 	
-	
-		hsp = (key_right - key_left * runSpd);// caculate run
+		hsp = (key_right - key_left)* runSpd * (!isAttack);// caculate run
 		
 		if(!place_meeting(x,y + 1,objPrtCollisionCube)){
 			state = DOMINIQUE_STATE.FALL;
@@ -55,7 +56,9 @@ switch (state) {
 		}
 		
 		
-		sprite_index = player_dominique_run; // action run of dominique
+		dominique_strike(player_dominique_spear_strike_attack,player_dominique_run);
+		
+		//sprite_index = player_dominique_run; // action run of dominique
         break;
 		
 	case DOMINIQUE_STATE.JUMP:
@@ -70,7 +73,8 @@ switch (state) {
 		}else if(key_right){
 			image_xscale = 1
 		}
-		sprite_index = player_dominique_jump; 
+			dominique_strike(player_dominique_spear_air_attack,player_dominique_jump);
+		//sprite_index = player_dominique_jump; 
         break;
 		
 	case DOMINIQUE_STATE.FALL:
@@ -85,11 +89,14 @@ switch (state) {
 		}else if(key_right){
 			image_xscale = 1
 		}
-        sprite_index = player_dominique_fall;
+		dominique_strike(player_dominique_spear_air_attack,player_dominique_fall);
+        //sprite_index = ;
         break;
 		
 	case DOMINIQUE_STATE.CROUCH:
-		sprite_index = player_dominique_crouch;
+	
+		dominique_strike(player_domonique_spear_crouch_attack,player_dominique_crouch);
+	//	sprite_index = player_dominique_crouch;
 		
 		if(!key_down && (key_left || key_right)){
 			state = DOMINIQUE_STATE.RUN;

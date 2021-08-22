@@ -15,4 +15,6 @@ mp = 10;
 hpLimit = 10;
 mpLimit = 10;
 
+isAttack = false;
+
 
