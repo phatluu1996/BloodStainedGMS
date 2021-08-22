@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"player_miriam_idle_whip_attack","path":"sprites/player_miriam_idle_whip_attack/player_miriam_idle_whip_attack.yy",},"order":9,},
+    {"id":{"name":"TileSet","path":"tilesets/TileSet/TileSet.yy",},"order":0,},
     {"id":{"name":"player_miriam_crouch","path":"sprites/player_miriam_crouch/player_miriam_crouch.yy",},"order":4,},
     {"id":{"name":"player_miriam_slide","path":"sprites/player_miriam_slide/player_miriam_slide.yy",},"order":6,},
     {"id":{"name":"player_robert_crouch","path":"sprites/player_robert_crouch/player_robert_crouch.yy",},"order":6,},
@@ -12,12 +13,15 @@
     {"id":{"name":"player_robert_firestairdown","path":"sprites/player_robert_firestairdown/player_robert_firestairdown.yy",},"order":17,},
     {"id":{"name":"player_miriam_idle","path":"sprites/player_miriam_idle/player_miriam_idle.yy",},"order":0,},
     {"id":{"name":"player_robert_wallcling","path":"sprites/player_robert_wallcling/player_robert_wallcling.yy",},"order":11,},
+    {"id":{"name":"bg_tileset","path":"sprites/bg_tileset/bg_tileset.yy",},"order":0,},
     {"id":{"name":"player_robert_idle","path":"sprites/player_robert_idle/player_robert_idle.yy",},"order":0,},
     {"id":{"name":"player_robert_fall","path":"sprites/player_robert_fall/player_robert_fall.yy",},"order":7,},
     {"id":{"name":"player_miriam_run","path":"sprites/player_miriam_run/player_miriam_run.yy",},"order":1,},
     {"id":{"name":"player_robert_stairdown","path":"sprites/player_robert_stairdown/player_robert_stairdown.yy",},"order":4,},
     {"id":{"name":"spr_miriam_test_collision_cube","path":"sprites/spr_miriam_test_collision_cube/spr_miriam_test_collision_cube.yy",},"order":2,},
     {"id":{"name":"objPrtPlayer","path":"objects/objPrtPlayer/objPrtPlayer.yy",},"order":0,},
+    {"id":{"name":"player_miriam_air_whip_attack","path":"sprites/player_miriam_air_whip_attack/player_miriam_air_whip_attack.yy",},"order":10,},
+    {"id":{"name":"player_miriam_crouch_whip_attack","path":"sprites/player_miriam_crouch_whip_attack/player_miriam_crouch_whip_attack.yy",},"order":11,},
     {"id":{"name":"player_miriam_idle_mask","path":"sprites/player_miriam_idle_mask/player_miriam_idle_mask.yy",},"order":5,},
     {"id":{"name":"player_robert_wallkick","path":"sprites/player_robert_wallkick/player_robert_wallkick.yy",},"order":12,},
     {"id":{"name":"player_robert_fire","path":"sprites/player_robert_fire/player_robert_fire.yy",},"order":10,},
@@ -81,6 +85,7 @@
     {"folderPath":"folders/Sprites/Player/Hachi.yy","order":2,"resourceVersion":"1.0","name":"Hachi","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Player/Robert.yy","order":3,"resourceVersion":"1.0","name":"Robert","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scripts/Player.yy","order":1,"resourceVersion":"1.0","name":"Player","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/Background.yy","order":3,"resourceVersion":"1.0","name":"Background","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

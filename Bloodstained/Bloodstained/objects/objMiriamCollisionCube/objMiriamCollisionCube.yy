@@ -4,7 +4,7 @@
     "path": "sprites/spr_miriam_test_collision_cube/spr_miriam_test_collision_cube.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,

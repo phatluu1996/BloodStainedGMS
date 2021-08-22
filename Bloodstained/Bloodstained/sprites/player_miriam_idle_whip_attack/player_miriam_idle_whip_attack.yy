@@ -9,7 +9,7 @@
   "swfPrecision": 2.525,
   "bbox_left": 0,
   "bbox_right": 95,
-  "bbox_top": 15,
+  "bbox_top": 0,
   "bbox_bottom": 47,
   "HTile": false,
   "VTile": false,
@@ -36,6 +36,9 @@
     {"compositeImage":{"FrameId":{"name":"217f17f6-ddf3-4254-98c7-ba3678e1ddcf","path":"sprites/player_miriam_idle_whip_attack/player_miriam_idle_whip_attack.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"217f17f6-ddf3-4254-98c7-ba3678e1ddcf","path":"sprites/player_miriam_idle_whip_attack/player_miriam_idle_whip_attack.yy",},"LayerId":{"name":"afcedbc5-4045-4154-85be-98f63ae90b9c","path":"sprites/player_miriam_idle_whip_attack/player_miriam_idle_whip_attack.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"player_miriam_idle_whip_attack","path":"sprites/player_miriam_idle_whip_attack/player_miriam_idle_whip_attack.yy",},"resourceVersion":"1.0","name":"217f17f6-ddf3-4254-98c7-ba3678e1ddcf","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"8d92b0a2-0a7c-4e23-bf53-658d770275b5","path":"sprites/player_miriam_idle_whip_attack/player_miriam_idle_whip_attack.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"8d92b0a2-0a7c-4e23-bf53-658d770275b5","path":"sprites/player_miriam_idle_whip_attack/player_miriam_idle_whip_attack.yy",},"LayerId":{"name":"afcedbc5-4045-4154-85be-98f63ae90b9c","path":"sprites/player_miriam_idle_whip_attack/player_miriam_idle_whip_attack.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"player_miriam_idle_whip_attack","path":"sprites/player_miriam_idle_whip_attack/player_miriam_idle_whip_attack.yy",},"resourceVersion":"1.0","name":"8d92b0a2-0a7c-4e23-bf53-658d770275b5","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"c7121816-0e8b-43fb-80dd-b40ad22dfd5c","path":"sprites/player_miriam_idle_whip_attack/player_miriam_idle_whip_attack.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"c7121816-0e8b-43fb-80dd-b40ad22dfd5c","path":"sprites/player_miriam_idle_whip_attack/player_miriam_idle_whip_attack.yy",},"LayerId":{"name":"afcedbc5-4045-4154-85be-98f63ae90b9c","path":"sprites/player_miriam_idle_whip_attack/player_miriam_idle_whip_attack.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"player_miriam_idle_whip_attack","path":"sprites/player_miriam_idle_whip_attack/player_miriam_idle_whip_attack.yy",},"resourceVersion":"1.0","name":"c7121816-0e8b-43fb-80dd-b40ad22dfd5c","tags":[],"resourceType":"GMSpriteFrame",},
@@ -51,7 +54,7 @@
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 6.0,
+    "length": 7.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
@@ -60,8 +63,9 @@
             {"id":"448e0729-a68f-4b2d-8131-ed8379e62fe2","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"47598ac9-bee4-4830-b74e-376c3b6222fc","path":"sprites/player_miriam_idle_whip_attack/player_miriam_idle_whip_attack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"fe69259d-41c5-41f7-9681-6108fa6c2f53","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f7ac23e7-f9ec-4674-a367-d26ab5be1c60","path":"sprites/player_miriam_idle_whip_attack/player_miriam_idle_whip_attack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8a7eec9c-01bc-4cba-bac8-4ca21e6af7bf","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"217f17f6-ddf3-4254-98c7-ba3678e1ddcf","path":"sprites/player_miriam_idle_whip_attack/player_miriam_idle_whip_attack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"f31b6630-8ad8-4a51-ad72-166a29e094b2","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c7121816-0e8b-43fb-80dd-b40ad22dfd5c","path":"sprites/player_miriam_idle_whip_attack/player_miriam_idle_whip_attack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"942b94eb-0bd1-49fd-9dfd-8ce58dd0b371","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3344a69c-0f21-4dde-98b0-c5dfee0ea153","path":"sprites/player_miriam_idle_whip_attack/player_miriam_idle_whip_attack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1869d44b-da65-4774-8623-e0af24a53c0f","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8d92b0a2-0a7c-4e23-bf53-658d770275b5","path":"sprites/player_miriam_idle_whip_attack/player_miriam_idle_whip_attack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f31b6630-8ad8-4a51-ad72-166a29e094b2","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c7121816-0e8b-43fb-80dd-b40ad22dfd5c","path":"sprites/player_miriam_idle_whip_attack/player_miriam_idle_whip_attack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"942b94eb-0bd1-49fd-9dfd-8ce58dd0b371","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3344a69c-0f21-4dde-98b0-c5dfee0ea153","path":"sprites/player_miriam_idle_whip_attack/player_miriam_idle_whip_attack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
