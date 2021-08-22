@@ -1,10 +1,10 @@
 {
   "spriteId": {
-    "name": "spr_miriam_test_collision_cube",
-    "path": "sprites/spr_miriam_test_collision_cube/spr_miriam_test_collision_cube.yy",
+    "name": "spr_hachi_collision_cube",
+    "path": "sprites/spr_hachi_collision_cube/spr_hachi_collision_cube.yy",
   },
   "solid": false,
-  "visible": false,
+  "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -23,9 +23,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -33,7 +31,7 @@
     "path": "folders/Objects/Collision.yy",
   },
   "resourceVersion": "1.0",
-  "name": "objMiriamCollisionCube",
+  "name": "objHachiCollisionCube",
   "tags": [],
   "resourceType": "GMObject",
 }

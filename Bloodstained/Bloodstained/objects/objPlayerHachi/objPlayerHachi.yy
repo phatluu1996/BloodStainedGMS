@@ -1,15 +1,18 @@
 {
   "spriteId": {
-    "name": "spr_miriam_test_collision_cube",
-    "path": "sprites/spr_miriam_test_collision_cube/spr_miriam_test_collision_cube.yy",
+    "name": "player_hachi_idle",
+    "path": "sprites/player_hachi_idle/player_hachi_idle.yy",
   },
   "solid": false,
-  "visible": false,
-  "spriteMaskId": null,
+  "visible": true,
+  "spriteMaskId": {
+    "name": "player_hachi_idle_mask",
+    "path": "sprites/player_hachi_idle_mask/player_hachi_idle_mask.yy",
+  },
   "persistent": false,
   "parentObjectId": {
-    "name": "objPrtCollisionCube",
-    "path": "objects/objPrtCollisionCube/objPrtCollisionCube.yy",
+    "name": "objPrtPlayer",
+    "path": "objects/objPrtPlayer/objPrtPlayer.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -25,15 +28,17 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Collision",
-    "path": "folders/Objects/Collision.yy",
+    "name": "Player",
+    "path": "folders/Objects/Player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "objMiriamCollisionCube",
+  "name": "objPlayerHachi",
   "tags": [],
   "resourceType": "GMObject",
 }

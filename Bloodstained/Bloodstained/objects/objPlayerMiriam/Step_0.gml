@@ -6,18 +6,19 @@
 key_left = keyboard_check(ord("A")); 
 key_right = keyboard_check(ord("D"));
 key_down = keyboard_check(ord("S")); 
-key_jump = keyboard_check(ord("K")); 
+key_jump = keyboard_check_pressed(ord("K")); 
+key_jump_hold = keyboard_check(ord("K")); 
 
-key_attack = keyboard_check(ord("J")); 
+key_attack = keyboard_check_pressed(ord("J")); 
 
 
 //State machine
 switch (state) {
     case MIRIAM_STATE.IDLE:
-        if((key_left || key_right) && !place_meeting(x + (key_right - key_left), y, objMiriamCollisionCube)){ // if key left/right press and not hit wall
+        if(!isAttack && (key_left || key_right) && !place_meeting(x + (key_right - key_left), y, objMiriamCollisionCube)){ // if key left/right press and not hit wall
 			state = MIRIAM_STATE.RUN;
 		}				
-		if(key_down){
+		if(key_down && !key_jump_hold){
 			state = MIRIAM_STATE.CROUCH;
 			mask_index = player_miriam_crouch_mask;
 		}
@@ -30,33 +31,21 @@ switch (state) {
 			state = MIRIAM_STATE.FALL; // move to crouch state
 		}
 		
-		if(key_attack && !isAttack){
-			isAttack = true;	
-		}
-		
-		if(isAttack){
-			sprite_index = player_miriam_idle_whip_attack; //swicth animation to 'player_miriam_idle_whip_attack'
-			if(animation_end()){
-				isAttack = false;	
-			}
-		}else{
-			sprite_index = player_miriam_idle; //swicth animation to 'player_miriam_idle'
-		}	
+		miriam_sprite(player_miriam_idle, player_miriam_idle_whip_attack);
         break;
 		
 	case MIRIAM_STATE.RUN:
-		hsp = (key_right - key_left) * runSpd; //calculate hsp 
+		hsp = (key_right - key_left) * runSpd * (!isAttack); //calculate hsp 
         if(!(key_left || key_right) || place_meeting(x + hsp, y, objMiriamCollisionCube)){// !(key_left || key_right) <=> !key_left && !key_right
 			state = MIRIAM_STATE.IDLE;
 		}	
-		if(key_left){
-			image_xscale = -1;
-		}else if(key_right){
-			image_xscale = 1;
-		}		
+		if(key_right - key_left != 0){
+			image_xscale = key_right - key_left; 	
+		}
 		if(key_down){//if user pres keydown
 			state = MIRIAM_STATE.CROUCH; // move to crouch state
 			hsp = 0; //stop moving when moving to crouch state
+			mask_index = player_miriam_crouch_mask;
 		}		
 		
 		if(!place_meeting(x, y + 1, objMiriamCollisionCube)){
@@ -67,39 +56,39 @@ switch (state) {
 			vsp = -JumpSpd;	
 			state = MIRIAM_STATE.JUMP;
 		}
-		sprite_index = player_miriam_run; //swicth animation to 'player_miriam_run'
+		
+		miriam_sprite(player_miriam_run, player_miriam_idle_whip_attack);
         break;
 		
 	case MIRIAM_STATE.JUMP:
-		if(key_left){
-			image_xscale = -1;
-		}else if(key_right){
-			image_xscale = 1;
+		if(key_right - key_left != 0 && !isAttack){
+			image_xscale = key_right - key_left; 	
 		}
 		hsp = (key_right - key_left) * runSpd; //calculate hsp
         vsp += gravSpd;	//gravity force
-		if(!key_jump || vsp >= 0){ //if user release jump key or vsp >= 0
+		if(!key_jump_hold || vsp >= 0){ //if user release jump key or vsp >= 0
 			state = MIRIAM_STATE.FALL; // move to crouch state
 			vsp = 0;
 		}
-		sprite_index = player_miriam_jump; //swicth animation to 'player_miriam_jump'
+		miriam_sprite(player_miriam_jump, player_miriam_air_whip_attack);
         break;
 		
 	case MIRIAM_STATE.FALL:
-		if(key_left){
-			image_xscale = -1;
-		}else if(key_right){
-			image_xscale = 1;
+		if(key_right - key_left != 0 && !isAttack){
+			image_xscale = key_right - key_left; 	
 		}
 		hsp = (key_right - key_left) * runSpd; //calculate hsp
         vsp += gravSpd; //gravity force
 		if(place_meeting(x, y + vsp, objMiriamCollisionCube)){
 			state = hsp != 0 ? MIRIAM_STATE.RUN : MIRIAM_STATE.IDLE;
 		}
-		sprite_index = player_miriam_fall; //swicth animation to 'player_miriam_fall'
+		miriam_sprite(player_miriam_fall, player_miriam_air_whip_attack);
         break;
 		
 	case MIRIAM_STATE.CROUCH:
+		if(key_right - key_left != 0){
+			image_xscale = key_right - key_left; 	
+		}
         if(!key_down){ //if user release key down
 			mask_index = player_miriam_idle_mask;
 			if(key_left || key_right){ //if user press key left or key right then move to run state
@@ -119,7 +108,7 @@ switch (state) {
 			mask_index = player_miriam_idle_mask;
 		}
 		
-		sprite_index = player_miriam_crouch; //swicth animation to 'player_miriam_crouch'
+		miriam_sprite(player_miriam_crouch, player_miriam_crouch_whip_attack);
         break;		
 		
 	case MIRIAM_STATE.SLIDE:
@@ -144,6 +133,9 @@ switch (state) {
 			state = MIRIAM_STATE.FALL; // move to crouch state
 			slideTimer = 0;
 			hsp = 0;
+			if(isAttack){
+				isAttack = false;
+			}
 		}
 		
 		sprite_index = player_miriam_slide; //swicth animation to 'player_miriam_slide'
