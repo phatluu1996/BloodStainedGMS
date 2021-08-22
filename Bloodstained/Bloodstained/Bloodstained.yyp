@@ -1,6 +1,6 @@
 {
   "resources": [
-    {"id":{"name":"spr_miriam_crouch","path":"sprites/spr_miriam_crouch/spr_miriam_crouch.yy",},"order":4,},
+    {"id":{"name":"player_miriam_crouch","path":"sprites/player_miriam_crouch/player_miriam_crouch.yy",},"order":4,},
     {"id":{"name":"player_robert_crouch","path":"sprites/player_robert_crouch/player_robert_crouch.yy",},"order":6,},
     {"id":{"name":"player_robert_walk","path":"sprites/player_robert_walk/player_robert_walk.yy",},"order":1,},
     {"id":{"name":"player_miriam_jump","path":"sprites/player_miriam_jump/player_miriam_jump.yy",},"order":2,},
@@ -12,6 +12,7 @@
     {"id":{"name":"player_miriam_run","path":"sprites/player_miriam_run/player_miriam_run.yy",},"order":1,},
     {"id":{"name":"player_robert_stairdown","path":"sprites/player_robert_stairdown/player_robert_stairdown.yy",},"order":4,},
     {"id":{"name":"objPrtPlayer","path":"objects/objPrtPlayer/objPrtPlayer.yy",},"order":0,},
+    {"id":{"name":"player_miriam_idle_mask","path":"sprites/player_miriam_idle_mask/player_miriam_idle_mask.yy",},"order":5,},
     {"id":{"name":"player_robert_wallkick","path":"sprites/player_robert_wallkick/player_robert_wallkick.yy",},"order":12,},
     {"id":{"name":"player_robert_fire","path":"sprites/player_robert_fire/player_robert_fire.yy",},"order":10,},
     {"id":{"name":"player_miriam_fall","path":"sprites/player_miriam_fall/player_miriam_fall.yy",},"order":3,},
@@ -30,6 +31,7 @@
     {"id":{"name":"player_hachi_walk","path":"sprites/player_hachi_walk/player_hachi_walk.yy",},"order":1,},
     {"id":{"name":"player_hachi_jump","path":"sprites/player_hachi_jump/player_hachi_jump.yy",},"order":2,},
     {"id":{"name":"player_hachi_stand","path":"sprites/player_hachi_stand/player_hachi_stand.yy",},"order":0,},
+    {"id":{"name":"objPlayerMiriam","path":"objects/objPlayerMiriam/objPlayerMiriam.yy",},"order":1,},
     {"id":{"name":"player_robert_stairsup","path":"sprites/player_robert_stairsup/player_robert_stairsup.yy",},"order":3,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
