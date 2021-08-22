@@ -7,7 +7,10 @@
   "visible": false,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "objPrtCollisionCube",
+    "path": "objects/objPrtCollisionCube/objPrtCollisionCube.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -26,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Collision",
+    "path": "folders/Objects/Collision.yy",
   },
   "resourceVersion": "1.0",
   "name": "objMiriamCollisionCube",

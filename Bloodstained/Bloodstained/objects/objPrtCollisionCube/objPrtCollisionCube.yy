@@ -1,16 +1,10 @@
 {
-  "spriteId": {
-    "name": "spr_hachi_collision_cube",
-    "path": "sprites/spr_hachi_collision_cube/spr_hachi_collision_cube.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "objPrtCollisionCube",
-    "path": "objects/objPrtCollisionCube/objPrtCollisionCube.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -31,7 +25,7 @@
     "path": "folders/Objects/Collision.yy",
   },
   "resourceVersion": "1.0",
-  "name": "objHachiCollisionCube",
+  "name": "objPrtCollisionCube",
   "tags": [],
   "resourceType": "GMObject",
 }
