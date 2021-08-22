@@ -18,6 +18,5 @@ mpLimit = 10;
 slideTimer = 0;
 
 
-
 //boolean
 isAttack = false;

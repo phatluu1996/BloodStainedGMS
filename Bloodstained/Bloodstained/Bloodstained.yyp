@@ -52,6 +52,7 @@
     {"id":{"name":"player_robert_firestairup","path":"sprites/player_robert_firestairup/player_robert_firestairup.yy",},"order":15,},
     {"id":{"name":"Script2","path":"scripts/Script2/Script2.yy",},"order":1,},
     {"id":{"name":"player_hachi_fall","path":"sprites/player_hachi_fall/player_hachi_fall.yy",},"order":3,},
+    {"id":{"name":"scrMiriam","path":"scripts/scrMiriam/scrMiriam.yy",},"order":1,},
     {"id":{"name":"objPlayerHachi","path":"objects/objPlayerHachi/objPlayerHachi.yy",},"order":1,},
     {"id":{"name":"player_hachi_crouch","path":"sprites/player_hachi_crouch/player_hachi_crouch.yy",},"order":4,},
     {"id":{"name":"ui_player_mp_unit","path":"sprites/ui_player_mp_unit/ui_player_mp_unit.yy",},"order":6,},
@@ -99,8 +100,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"test_dominique","path":"rooms/test_dominique/test_dominique.yy",},},
     {"roomId":{"name":"test_hachi","path":"rooms/test_hachi/test_hachi.yy",},},
+    {"roomId":{"name":"test_dominique","path":"rooms/test_dominique/test_dominique.yy",},},
     {"roomId":{"name":"test_miriam","path":"rooms/test_miriam/test_miriam.yy",},},
     {"roomId":{"name":"test_robert","path":"rooms/test_robert/test_robert.yy",},},
     {"roomId":{"name":"test_miriam","path":"rooms/test_miriam/test_miriam.yy",},},

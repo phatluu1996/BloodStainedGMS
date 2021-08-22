@@ -31,7 +31,20 @@ switch (state) {
 			state = MIRIAM_STATE.FALL; // move to crouch state
 		}
 		
-		miriam_sprite(player_miriam_idle, player_miriam_idle_whip_attack);
+		if(key_attack && !isAttack){
+			isAttack = true;	
+			image_index = 0;
+		}
+		
+		if(isAttack){
+			sprite_index = player_miriam_idle_whip_attack;			
+			if(animation_end()){
+				isAttack = false;	
+			}
+		}else{
+			sprite_index = player_miriam_idle;
+		}
+		//miriam_sprite(player_miriam_idle, player_miriam_idle_whip_attack);
         break;
 		
 	case MIRIAM_STATE.RUN:
