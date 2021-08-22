@@ -9,7 +9,7 @@
   "swfPrecision": 2.525,
   "bbox_left": 16,
   "bbox_right": 31,
-  "bbox_top": 18,
+  "bbox_top": 24,
   "bbox_bottom": 47,
   "HTile": false,
   "VTile": false,
@@ -24,12 +24,12 @@
   "gridX": 24,
   "gridY": 24,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b88b881b-bbef-44aa-a5e9-893721b31f4d","path":"sprites/player_miriam_idle_mask/player_miriam_idle_mask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b88b881b-bbef-44aa-a5e9-893721b31f4d","path":"sprites/player_miriam_idle_mask/player_miriam_idle_mask.yy",},"LayerId":{"name":"5a6c6254-a395-4528-9ec9-2f34229a550a","path":"sprites/player_miriam_idle_mask/player_miriam_idle_mask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"player_miriam_idle_mask","path":"sprites/player_miriam_idle_mask/player_miriam_idle_mask.yy",},"resourceVersion":"1.0","name":"b88b881b-bbef-44aa-a5e9-893721b31f4d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"b88b881b-bbef-44aa-a5e9-893721b31f4d","path":"sprites/player_miriam_crouch_mask/player_miriam_crouch_mask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"b88b881b-bbef-44aa-a5e9-893721b31f4d","path":"sprites/player_miriam_crouch_mask/player_miriam_crouch_mask.yy",},"LayerId":{"name":"5a6c6254-a395-4528-9ec9-2f34229a550a","path":"sprites/player_miriam_crouch_mask/player_miriam_crouch_mask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"player_miriam_crouch_mask","path":"sprites/player_miriam_crouch_mask/player_miriam_crouch_mask.yy",},"resourceVersion":"1.0","name":"b88b881b-bbef-44aa-a5e9-893721b31f4d","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"player_miriam_idle_mask","path":"sprites/player_miriam_idle_mask/player_miriam_idle_mask.yy",},
+    "spriteId": {"name":"player_miriam_crouch_mask","path":"sprites/player_miriam_crouch_mask/player_miriam_crouch_mask.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"d806b1c2-621d-48e4-86de-00a1a7f89c35","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b88b881b-bbef-44aa-a5e9-893721b31f4d","path":"sprites/player_miriam_idle_mask/player_miriam_idle_mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a8403c13-2f96-4ae6-b312-79d68d34f366","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b88b881b-bbef-44aa-a5e9-893721b31f4d","path":"sprites/player_miriam_crouch_mask/player_miriam_crouch_mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,9 +58,9 @@
     "yorigin": 48,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"player_miriam_idle_mask","path":"sprites/player_miriam_idle_mask/player_miriam_idle_mask.yy",},
+    "parent": {"name":"player_miriam_crouch_mask","path":"sprites/player_miriam_crouch_mask/player_miriam_crouch_mask.yy",},
     "resourceVersion": "1.3",
-    "name": "player_miriam_idle_mask",
+    "name": "player_miriam_crouch_mask",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -97,7 +97,7 @@
     "path": "folders/Sprites/Player/Miriam.yy",
   },
   "resourceVersion": "1.0",
-  "name": "player_miriam_idle_mask",
+  "name": "player_miriam_crouch_mask",
   "tags": [],
   "resourceType": "GMSprite",
 }
