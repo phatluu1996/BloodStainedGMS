@@ -1,3 +1,7 @@
+
+
+draw_hp_bar()
+draw_mp_bar()
 draw_mp_bar();
 draw_hp_bar();
 draw_self();
