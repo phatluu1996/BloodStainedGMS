@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4920205f-e8ac-4a2a-b658-32c77a8cd922","path":"sprites/ForestTemple/ForestTemple.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4920205f-e8ac-4a2a-b658-32c77a8cd922","path":"sprites/ForestTemple/ForestTemple.yy",},"LayerId":{"name":"6c5ec7cf-34fc-43f7-80cf-ed75a63915da","path":"sprites/ForestTemple/ForestTemple.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"ForestTemple","path":"sprites/ForestTemple/ForestTemple.yy",},"resourceVersion":"1.0","name":"4920205f-e8ac-4a2a-b658-32c77a8cd922","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"b8930768-622b-4062-85ec-c969d700b5c0","path":"sprites/ForestStage/ForestStage.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"b8930768-622b-4062-85ec-c969d700b5c0","path":"sprites/ForestStage/ForestStage.yy",},"LayerId":{"name":"c91406c3-c673-42cf-9225-a6e3d7d2d9f4","path":"sprites/ForestStage/ForestStage.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"ForestStage","path":"sprites/ForestStage/ForestStage.yy",},"resourceVersion":"1.0","name":"b8930768-622b-4062-85ec-c969d700b5c0","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"ForestTemple","path":"sprites/ForestTemple/ForestTemple.yy",},
+    "spriteId": {"name":"ForestStage","path":"sprites/ForestStage/ForestStage.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"166ac2ee-7a87-4096-8426-cae3af975452","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4920205f-e8ac-4a2a-b658-32c77a8cd922","path":"sprites/ForestTemple/ForestTemple.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0559204a-6b31-4fe4-863d-ec11f79fc09b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b8930768-622b-4062-85ec-c969d700b5c0","path":"sprites/ForestStage/ForestStage.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"ForestTemple","path":"sprites/ForestTemple/ForestTemple.yy",},
+    "parent": {"name":"ForestStage","path":"sprites/ForestStage/ForestStage.yy",},
     "resourceVersion": "1.3",
-    "name": "ForestTemple",
+    "name": "ForestStage",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6c5ec7cf-34fc-43f7-80cf-ed75a63915da","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c91406c3-c673-42cf-9225-a6e3d7d2d9f4","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/Background.yy",
   },
   "resourceVersion": "1.0",
-  "name": "ForestTemple",
+  "name": "ForestStage",
   "tags": [],
   "resourceType": "GMSprite",
 }
