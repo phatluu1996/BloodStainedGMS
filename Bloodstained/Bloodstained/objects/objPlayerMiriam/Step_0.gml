@@ -188,10 +188,10 @@ if(isInvincible){
 	        break;
 			
 		case 2:
-	        image_alpha = 0;
+	        image_alpha = 0.5;
 	        break;
 	}
-	if(invinTimer >= room_speed){
+	if(invinTimer >= room_speed * 3 / 2){
 		invinTimer = 0;
 		isInvincible = false;
 		image_alpha = 1;

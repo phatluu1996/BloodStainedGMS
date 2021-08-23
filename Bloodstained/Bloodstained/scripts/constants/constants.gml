@@ -1,0 +1,5 @@
+#macro PLAYER_DEPTH  0;
+#macro EFFECT_DEPTH  -1;
+#macro ENEMY_DEPTH  -1;
+#macro COLLISION_DEPTH  5;
+#macro WEAPON_DEPTH -1;

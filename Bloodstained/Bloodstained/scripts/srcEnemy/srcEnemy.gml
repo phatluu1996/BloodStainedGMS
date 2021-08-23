@@ -46,7 +46,7 @@ function EnemyStepEvent(){
 			
 		case ENEMY_STATE.OUTSIDE_VIEW:
 	        if(inside_view()){
-				instance_create_depth(xstart, ystart, depth, object_index);	
+				instance_create_depth(xstart, ystart, 1, object_index);	
 				instance_destroy();
 			}
 	        break;

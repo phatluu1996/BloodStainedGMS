@@ -49,7 +49,7 @@ function miriam_sprite_ext(sprite_1, sprite_2, sprite_3, sprite_4){
 			isSkill = false;	
 			if(skill == MIRIAM_SKILL.SICKLE){
 				if(instance_number(objMiriamSickle) < 1){
-					var sickle = instance_create_depth(x + image_xscale * 11, y - 16, depth - 1, objMiriamSickle);
+					var sickle = instance_create_depth(x + image_xscale * 11, y - 16, -1, objMiriamSickle);
 					sickle.image_xscale = image_xscale;
 					sickle.hsp = image_xscale * 3;
 					sickle.player = id;
@@ -71,7 +71,7 @@ function miriam_sprite_ext(sprite_1, sprite_2, sprite_3, sprite_4){
 
 function create_miriam_rapier(_sprite, _hsp, _vsp, _offset){
 	//#1 rapier
-	var sickle = instance_create_depth(x + image_xscale * 9, y - 16, depth - 1, objMiriamRapier);
+	var sickle = instance_create_depth(x + image_xscale * 9, y - 16, -1, objMiriamRapier);
 	sickle.sprite_index = _sprite;
 	sickle.image_xscale = image_xscale;
 	sickle.hsp = image_xscale * _hsp * _offset;
@@ -87,4 +87,14 @@ function create_miriam_attack_box(_sprite){
 
 function destroy_miriam_attack_box(){
 	instance_destroy(objMiriamWhip);
+}
+
+function create_attack_impact_effect(_x, _y){
+	var eff = instance_create_depth(_x, _y, -1, objMiriamAttackEffect);
+	eff.sprite_index = player_miriam_whip_attack_impact_effect;
+}
+
+function create_attack_block_effect(_x, _y){
+	var eff = instance_create_depth(_x, _y, -1, objMiriamAttackEffect);
+	eff.sprite_index = player_miriam_whip_block_impact_effect;
 }
