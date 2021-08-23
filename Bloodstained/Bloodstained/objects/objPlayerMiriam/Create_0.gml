@@ -5,7 +5,8 @@ enum MIRIAM_STATE{
 	JUMP,
 	FALL,
 	CROUCH,
-	SLIDE
+	SLIDE,
+	HIT
 }
 
 enum MIRIAM_SKILL{
@@ -31,4 +32,4 @@ isSkill = false;
 canSkill = true;
 
 //skill
-skill = MIRIAM_SKILL.RAPIER;
+skill = MIRIAM_SKILL.SICKLE;

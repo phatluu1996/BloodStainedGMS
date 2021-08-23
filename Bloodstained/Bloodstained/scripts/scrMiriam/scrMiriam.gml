@@ -2,12 +2,14 @@ function miriam_sprite(sprite_1, sprite_2){
 	if(key_attack && !isAttack){
 		isAttack = true;	
 		image_index = 0;
+		create_miriam_attack_box(sprite_2);
 	}
 		
 	if(isAttack){
 		sprite_index = sprite_2; //swicth animation to 'sprite_2'
 		if(animation_end()){
 			isAttack = false;	
+			destroy_miriam_attack_box();
 		}
 	}else{
 		sprite_index = sprite_1; //swicth animation to 'sprite_1'
@@ -19,6 +21,7 @@ function miriam_sprite_ext(sprite_1, sprite_2, sprite_3, sprite_4){
 		if(key_attack){
 			isAttack = true;	
 			image_index = 0;
+			create_miriam_attack_box(sprite_2);
 		}else if(key_skill && canSkill){
 			isSkill = true;	
 			image_index = 0;
@@ -29,6 +32,7 @@ function miriam_sprite_ext(sprite_1, sprite_2, sprite_3, sprite_4){
 		sprite_index = sprite_2; //swicth animation to 'sprite_2'
 		if(animation_end()){
 			isAttack = false;	
+			destroy_miriam_attack_box();
 		}
 	}else if(isSkill){
 		switch (skill) {
@@ -73,4 +77,14 @@ function create_miriam_rapier(_sprite, _hsp, _vsp, _offset){
 	sickle.hsp = image_xscale * _hsp * _offset;
 	sickle.vsp = -_vsp * _offset;
 	sickle.player = id;	
+}
+
+function create_miriam_attack_box(_sprite){
+	var ab = instance_create_depth(x, y, depth - 1, objMiriamWhip);
+	ab.sprite_index = asset_get_index(sprite_get_name(_sprite) + "_box");
+	ab.player = id;
+}
+
+function destroy_miriam_attack_box(){
+	instance_destroy(objMiriamWhip);
 }

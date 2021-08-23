@@ -17,5 +17,9 @@ gravSpd = 0.25;
 hsp = 0;
 vsp = 0;
 state = PLAYER_STATE.IDLE;
+isHit = false;
+isInvincible = false;
+hitTimer = 0;
+invinTimer = 0;
 
 

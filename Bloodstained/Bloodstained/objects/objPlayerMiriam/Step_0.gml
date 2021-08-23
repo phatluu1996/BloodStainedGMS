@@ -19,7 +19,7 @@ switch (state) {
         if(!isAttack && (key_left || key_right) && !place_meeting(x + (key_right - key_left), y, objPrtCollisionCube)){ // if key left/right press and not hit wall
 			state = MIRIAM_STATE.RUN;
 		}				
-		if(key_down && !key_jump_hold){
+		if(key_down && !key_jump_hold && !isAttack){
 			state = MIRIAM_STATE.CROUCH;
 			mask_index = player_miriam_crouch_mask;
 		}
@@ -41,10 +41,10 @@ switch (state) {
         if(!(key_left || key_right) || place_meeting(x + hsp, y, objPrtCollisionCube)){// !(key_left || key_right) <=> !key_left && !key_right
 			state = MIRIAM_STATE.IDLE;
 		}	
-		if(key_right - key_left != 0){
+		if(key_right - key_left != 0 && !isAttack){
 			image_xscale = key_right - key_left; 	
 		}
-		if(key_down){//if user pres keydown
+		if(key_down && !isAttack){//if user pres keydown
 			state = MIRIAM_STATE.CROUCH; // move to crouch state
 			hsp = 0; //stop moving when moving to crouch state
 			mask_index = player_miriam_crouch_mask;
@@ -88,7 +88,7 @@ switch (state) {
         break;
 		
 	case MIRIAM_STATE.CROUCH:
-		if(key_right - key_left != 0){
+		if(key_right - key_left != 0 && !isAttack){
 			image_xscale = key_right - key_left; 	
 		}
         if(!key_down){ //if user release key down
@@ -100,7 +100,7 @@ switch (state) {
 			}
 		}		
 		
-		if(key_jump){
+		if(key_jump && !isAttack){
 			state = MIRIAM_STATE.SLIDE;		
 			mask_index = player_miriam_slide_mask;
 		}
@@ -140,14 +140,63 @@ switch (state) {
 		sprite_index = player_miriam_slide; //swicth animation to 'player_miriam_slide'
 		break;
 		
+	case MIRIAM_STATE.HIT:
+		hitTimer++;
+		isHit = false;
+		vsp += gravSpd;
+		if(hitTimer >= room_speed / 2){
+			hitTimer = 0;
+			hsp = 0;
+			if(place_meeting(x, y + 1, objPrtCollisionCube)){
+				state = MIRIAM_STATE.IDLE;
+			}else{
+				state = MIRIAM_STATE.FALL;
+			}
+		}
+		sprite_index = player_miriam_get_hit;
+		break;
+		
     default:        
         break;
 }
 
 
 //Damage
+var enemy = instance_place(x, y, objPrtEnemy);
+if(enemy >= 0 && state != MIRIAM_STATE.HIT && !isInvincible){
+	isHit = true;
+	isInvincible = true;
+	isAttack = false;
+	isSkill = false;
+	state = MIRIAM_STATE.HIT;
+	vsp = -3;
+	hsp = -image_xscale * runSpd;
+	hp -= enemy.damage;
+	destroy_miriam_attack_box();
+}
 
-
+//Invincible
+if(isInvincible){
+	invinTimer++;
+	switch (invinTimer/2 mod 3) {
+	    case 0:
+	        image_alpha = 0;
+	        break;
+			
+		case 1:
+	        image_alpha = 1;
+	        break;
+			
+		case 2:
+	        image_alpha = 0;
+	        break;
+	}
+	if(invinTimer >= room_speed){
+		invinTimer = 0;
+		isInvincible = false;
+		image_alpha = 1;
+	}
+}
 
 //Collision x
 if(place_meeting(x + hsp, y, objPrtCollisionCube)){ //Check at object + vsp in y axis in the next frame
