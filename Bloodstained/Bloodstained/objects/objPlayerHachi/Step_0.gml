@@ -4,12 +4,14 @@ key_right = keyboard_check(ord("D")); //Check action press "D"
 key_down = keyboard_check(ord("S")); //Check action press "S"
 key_jump = keyboard_check(vk_space); //Check action press space_bar
 
+key_attack = keyboard_check_pressed(ord("L"));
+
 //State machine
 switch (state) {
     case HACHI_STATE.IDLE:
 	
 	//Check action
-		if((key_left || key_right) && !place_meeting(x + (key_right - key_left), y, objHachiCollisionCube)){
+		if((key_left || key_right) && !place_meeting(x + (key_right - key_left), y, objPrtCollisionCube)){
 			state = HACHI_STATE.RUN;
 		}
 				
@@ -22,9 +24,9 @@ switch (state) {
 			state = HACHI_STATE.JUMP;
 		}
 		
-	//Set sprite
-		sprite_index = player_hachi_idle;
+		hachi_sprite(player_hachi_idle, player_hachi_attack);
 		
+	//Set sprite
         break;
 		
 	case HACHI_STATE.RUN:
@@ -46,11 +48,13 @@ switch (state) {
 			hsp = 0;
 		}
 		
-		if(place_meeting(x + hsp, y, objHachiCollisionCube)){
+		if(place_meeting(x + hsp, y, objPrtCollisionCube)){
 			state = HACHI_STATE.IDLE;
 		}
 		
-		
+		if(!place_meeting(x, y + 1, objPrtCollisionCube)){
+			state = HACHI_STATE.FALL;
+		}		
 		
 		if(key_left){
 			image_xscale = -1;
@@ -92,7 +96,7 @@ switch (state) {
 		}
 	
 	//Set sprite
-		sprite_index = player_hachi_jump;
+		hachi_sprite(player_hachi_jump, player_hachi_jump_attack);
 		
         break;
 		
@@ -105,12 +109,12 @@ switch (state) {
 			image_xscale = 1;
 		}
 		
-		if(place_meeting(x, y + vsp, objHachiCollisionCube)){
+		if(place_meeting(x, y + vsp, objPrtCollisionCube)){
 			state = hsp != 0 ? HACHI_STATE.RUN : HACHI_STATE.IDLE;
 		}
 	
 	//Set sprite
-		sprite_index = player_hachi_fall;
+		hachi_sprite(player_hachi_fall,player_hachi_jump_attack);
 		
         break;
 		
@@ -123,8 +127,8 @@ switch (state) {
 //Collistion
 
 //Update X,Y
-if(place_meeting(x + hsp, y, objHachiCollisionCube)){
-	while(!place_meeting(x + sign(hsp), y, objHachiCollisionCube)){
+if(place_meeting(x + hsp, y, objPrtCollisionCube)){
+	while(!place_meeting(x + sign(hsp), y, objPrtCollisionCube)){
 		x += sign(hsp);
 	}
 	hsp = 0;
@@ -132,8 +136,8 @@ if(place_meeting(x + hsp, y, objHachiCollisionCube)){
 x += hsp;
 
 
-if(place_meeting(x, y + vsp, objHachiCollisionCube)){
-	while(!place_meeting(x, y + sign(vsp), objHachiCollisionCube)){
+if(place_meeting(x, y + vsp, objPrtCollisionCube)){
+	while(!place_meeting(x, y + sign(vsp), objPrtCollisionCube)){
 		y += sign(vsp);
 	}
 	vsp = 0;
